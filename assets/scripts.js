@@ -54,7 +54,8 @@ function carregarMensagens(response) {
                 <span>${mensagens[i].text}</span>
             </div>`;
     } else if (mensagens[i].type === "private_message") {
-      containerMensagens.innerHTML += `
+      if (mensagens[i].to === nomeUsuario || mensagens[i].from === nomeUsuario) {
+        containerMensagens.innerHTML += `
             <div class="msg-reservada">
                 <span class="hora">(${mensagens[i].time})</span>
                 <span class="nome">${mensagens[i].from}</span>
@@ -62,6 +63,7 @@ function carregarMensagens(response) {
                 <span class="nome">${mensagens[i].to}: </span>
                 <span>${mensagens[i].text}</span>
             </div>`;
+      }  
     }
   }
 
@@ -86,12 +88,22 @@ function manterConexao() {
 
 function enviarMensagem() {
   let textoMensagem = document.querySelector("input").value;
-  let mensagem = {
-    from: nomeUsuario,
-    to: "Todos",
-    text: textoMensagem,
-    type: "message" // ou "private_message" para o bônus
-  };
+  let mensagem;
+  if (tipoVisibilidade === "Reservadamente") {
+      mensagem = {
+        from: nomeUsuario,
+        to: nomeUsuarioSelecionado,
+        text: textoMensagem,
+        type: "private_message" // ou "private_message" para o bônus
+      };
+  } else {
+    mensagem = {
+      from: nomeUsuario,
+      to: "Todos",
+      text: textoMensagem,
+      type: "message" // ou "private_message" para o bônus
+    };
+  }
 
   let promise = axios.post(
     "https://mock-api.driven.com.br/api/v6/uol/messages",
