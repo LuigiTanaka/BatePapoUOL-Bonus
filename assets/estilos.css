@@ -14,7 +14,7 @@
     font-size: 18px;
     line-height: 21px;
     border: none;
-    width: 312px;
+    width: 295px;
     height: 30px;
   }
   
@@ -117,7 +117,7 @@
     width: 100%;
     position: fixed;
     bottom: 0;
-    padding: 0 18px;
+    padding: 0 20px;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
   }
 
@@ -150,7 +150,11 @@
   }
 
   .topo-usuarios h1 {
-    padding: 30px 38px;
+    padding: 30px 20px;
+  }
+
+  .usuarios {
+    word-wrap: break-word;
   }
 
   .usuario, .visibilidade {
@@ -158,10 +162,15 @@
       align-items: center;
       padding: 5px;
       justify-content: space-between;
+      word-wrap: break-word;
   }
 
   .topo-visibilidade h1 {
       padding: 30px 0 20px 0;
+  }
+
+  .visibilidades {
+    margin-bottom: 20px;
   }
 
   .check {
