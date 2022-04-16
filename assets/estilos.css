@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f3f3f3;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  input {
+    color: #000000;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    border: none;
+    width: 312px;
+    height: 30px;
+  }
+  
+  input::placeholder {
+    font-style: italic;
+    color: #000000;
+  }
+  
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 25px;
+    margin-left: 2px;
+  }
+  
+  .topo ion-icon {
+    font-size: 44px;
+  }
+  
+  .icone ion-icon {
+    font-size: 32px;
+  }
+  
+  .icone ion-icon:active, .topo ion-icon:active {
+    transform: scale(0.9);
+  }
+  
+  .topo {
+    background-color: #ffffff;
+    height: 80px;
+    width: 100%;
+    padding: 0 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+  }
+  
+  .topo img {
+    width: 75px;
+    height: 53px;
+  }
+  
+  .mensagens {
+    margin-top: 106px;
+    margin-bottom: 84px;
+    word-wrap: break-word;
+  }
+  
+  .msg-status {
+    background-color: #dcdcdc;
+    padding: 14px 6px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+  
+  .msg-normal {
+    background-color: #ffffff;
+    padding: 14px 6px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+  
+  .msg-reservada {
+    background-color: #ffdede;
+    padding: 14px 6px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+  }
+  
+  .hora {
+    color: #aaaaaa;
+  }
+  
+  .nome {
+    font-weight: 600;
+  }
+
+  .area-de-baixo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0 18px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .sidebar {
+      z-index: 1;
+      background-color: #ffffff;
+      width: 68%;
+      height: 100%;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      padding: 0 16px;
+      box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+      overflow-y: scroll;
+  }
+
+  .sidebar span {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .icone-nome {
+      display: flex;
+      align-items: center;
+  }
+
+  .icone-nome ion-icon {
+      font-size: 24px;
+      padding-right: 6px;
+  }
+
+  .topo-usuarios h1 {
+    padding: 30px 38px;
+  }
+
+  .usuario, .visibilidade {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      justify-content: space-between;
+  }
+
+  .topo-visibilidade h1 {
+      padding: 30px 0 20px 0;
+  }
+
+  .check {
+      font-size: 18px;
+      color: #28BB25;
+  }
+
+  .fundo-escuro {
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.55);
+      width: 32%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+  }
+
+  .escondido {
+      display: none;
+  }
+  

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bate Papo UOL</title>
+
+    <link rel="stylesheet" href="assets/css-reset.css" />
+    <link rel="stylesheet" href="assets/estilos.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="topo">
+      <img src="images/logo 1.png" />
+      <ion-icon onclick="mostrarSidebar()" name="people"></ion-icon>
+    </div>
+
+    <div class="sidebar escondido">
+      <div class="topo-usuarios">
+        <h1>Escolha um contato para enviar mensagem:</h1>
+      </div>
+
+      <div onclick="selecionarUsuario(this)" class="usuario todos">
+        <div class="icone-nome">
+          <ion-icon name="people"></ion-icon>
+          <span>Todos</span>
+        </div>
+        <div class="user escondido">
+          <ion-icon name="checkmark"></ion-icon>
+        </div>
+      </div>
+
+      <div class="usuarios">
+        
+      </div>
+
+      <div class="topo-visibilidade">
+        <h1>Escolha a visibilidade:</h1>
+      </div>
+
+      <div class="visibilidades">
+        <div onclick="selecionarVisibilidade(this)" class="visibilidade publico">
+          <div class="icone-nome">
+            <ion-icon name="lock-open"></ion-icon>
+            <span>Público</span>
+          </div>
+          <div class="visib escondido">
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+        
+        <div onclick="selecionarVisibilidade(this)" class="visibilidade">
+          <div class="icone-nome">
+            <ion-icon name="lock-closed"></ion-icon>
+            <span>Reservadamente</span>
+          </div>
+          <div class="visib escondido">
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div onclick="esconderSidebar()" class="fundo-escuro escondido">
+
+    </div>
+
+    <div class="mensagens"></div>
+
+    <div class="area-de-baixo">
+      <div class="area-de-escrita">
+        <input type="text" placeholder="Escreva aqui..." />
+      </div>
+      <div class="icone">
+        <ion-icon onclick="enviarMensagem()" name="paper-plane-outline"></ion-icon>
+      </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="assets/scripts.js"></script>
+  </body>
+</html>
